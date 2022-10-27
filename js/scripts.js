@@ -9,13 +9,22 @@ function pigLatin(text) {
 
   for(let i = 0; i < inputArray.length; i++) {
     if(vowels.includes(inputArray[i].charAt(0))) {
-      console.log('test');
       let newWord = inputArray[i] + 'way';
       outputArray.push(newWord);
-    } else {
-      outputArray.push(inputArray[i]);
+      console.log('first condition triggered: ' + (outputArray));
     }
-    console.log(outputArray);
+  }
+  
+  for(let i = 0; i < inputArray.length; i++) {
+  if(!vowels.includes(inputArray[i].charAt(0))) {
+      let markedWord = inputArray[i];
+        for(let i = 0; i < markedWord.length; i++);
+          if(!vowels.includes(markedWord.charAt(i))) {
+            let newWord = '';
+            newWord += markedWord.charAt(i);
+            console.log('test of second condition: ' + (newWord));
+          }     
+    }
   }
 }
 
